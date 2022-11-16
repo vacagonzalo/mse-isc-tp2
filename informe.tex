@@ -1,0 +1,97 @@
+\documentclass[
+    11pt,
+    spanish,
+    a4paper
+]{article}
+%\usepackage[a4paper,left=.4in,right=.4in,top=1in,bottom=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{authoraftertitle}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{verbatim}
+
+\def\doctype{Trabajo práctico}
+\title{Ejercicios de FT \& RDB}
+\author{Gonzalo Nahuel Vaca}
+
+\begin{document}
+
+\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\vspace*{1cm}
+
+		\Huge
+		\textbf{\doctype}
+		\vspace{0.5cm}
+
+		\LARGE
+		\@title
+		\vspace{0.5cm}
+
+		\textbf{Introducción a los sistemas críticos}
+
+		\vspace{1.5cm}
+
+		\textbf{\@author}
+
+		\vspace{1.5cm}
+
+		\includegraphics[width=0.8\textwidth]{img/logoFIUBA.pdf}
+
+		\vfill
+		Maestría en Sistemas Embebidos\\
+		Universidad de Buenos Aires\\
+		Argentina\\
+		\today
+	\end{center}
+\end{titlepage}
+\makeatother
+\newpage
+
+\section{Ejercicio 1}
+
+En la figura \ref{fig:rdboriginal} se observa el RDB del ejercicio.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/rdb.png}
+	\caption{RDB del ejercicio.}
+	\label{fig:rdboriginal}
+\end{figure}
+
+A partir de la figura \ref{fig:rdboriginal} se identifican los siguientes grupos:
+
+$$ \alpha = (x_1 \cap x_2 \cap x_3) $$
+$$ \beta = (x_6 \cap x_7) $$
+$$ \gamma = (x_1 \cap x_4 \cap x_7)$$
+$$ \delta = (x_1 \cap x_4 \cap x_5 \cap x_3)$$
+$$ \epsilon = (x_6 \cap x_4 \cap x_2 \cap x_3) $$
+$$ \zeta = (x_6 \cap x_4 \cap x_2 \cap x_5 \cap x_7)$$
+
+Finalmente el RDB paralelo queda de la siguiente manera:
+
+$$ \theta = \alpha \cup \beta \cup \gamma \cup \delta \cup \epsilon \cup \zeta $$
+
+\newpage
+
+\section{Ejercicio 2}
+
+En la figura \ref{fig:rdbequivalente} se puede observar un modelo RDB equivalente.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/rdb2.png}
+	\caption{RDB del equivalente.}
+	\label{fig:rdbequivalente}
+\end{figure}
+
+A continuación se observa su función de estructura:
+
+$$ \theta = x_1 \cup x_2 \cup x_6 \cup x_7 \cup (x_3 \cap x_8) \cup (x_4 \cap x_5) $$
+
+\end{document}
