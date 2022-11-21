@@ -8,6 +8,7 @@
 \usepackage[spanish]{babel}
 \usepackage{authoraftertitle}
 \usepackage{booktabs}
+\usepackage{breqn}
 \usepackage{caption}
 \usepackage{float}
 \usepackage{graphicx}
@@ -64,20 +65,27 @@ En la figura \ref{fig:rdboriginal} se observa el RDB del ejercicio.
 	\label{fig:rdboriginal}
 \end{figure}
 
-A partir de la figura \ref{fig:rdboriginal} se identifican los siguientes grupos:
+A partir de la figura \ref{fig:rdboriginal} se identificaron los caminos posibles:
 
-$$ \alpha = (x_1 \cap x_2 \cap x_3) $$
-$$ \beta = (x_6 \cap x_7) $$
-$$ \gamma = (x_1 \cap x_4 \cap x_7)$$
-$$ \delta = (x_1 \cap x_4 \cap x_5 \cap x_3)$$
-$$ \epsilon = (x_6 \cap x_4 \cap x_2 \cap x_3) $$
-$$ \zeta = (x_6 \cap x_4 \cap x_2 \cap x_5 \cap x_7)$$
+$$ c_1 = (x_1 \cap x_2 \cap x_3) $$
+$$ c_2 = (x_6 \cap x_7) $$
+$$ c_3 = (x_1 \cap x_4 \cap x_7) $$
+$$ c_4 = (x_1 \cap x_4 \cap x_5 \cap x_3) $$
+$$ c_5 = (x_6 \cap x_4 \cap x_2 \cap x_3) $$
+$$ c_6 = (x_6 \cap x_4 \cap x_2 \cap x_5 \cap x_7) $$
 
 Finalmente el RDB paralelo queda de la siguiente manera:
 
-$$ \theta = \alpha \cup \beta \cup \gamma \cup \delta \cup \epsilon \cup \zeta $$
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/rdb_paralelo.png}
+	\caption{RDB paralelo.}
+	\label{fig:rdbparalelo}
+\end{figure}
 
-\newpage
+\begin{dmath}
+	\theta = (x_1 \cap x_2 \cap x_3) \cup (x_6 \cap x_7) \cup (x_1 \cap x_4 \cap x_7) \cup (x_1 \cap x_4 \cap x_5 \cap x_3) \cup (x_6 \cap x_4 \cap x_2 \cap x_3) \cup (x_6 \cap x_4 \cap x_2 \cap x_5 \cap x_7)
+\end{dmath}
 
 \section{Ejercicio 2}
 
@@ -85,14 +93,16 @@ En la figura \ref{fig:rdbequivalente} se puede observar un modelo RDB equivalent
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/rdb2.png}
+	\includegraphics[width=\textwidth]{img/rdb2.png}
 	\caption{RDB del equivalente.}
 	\label{fig:rdbequivalente}
 \end{figure}
 
 A continuación se observa su función de estructura:
 
-$$ \theta = x_1 \cup x_2 \cup x_6 \cup x_7 \cup (x_3 \cap x_8) \cup (x_4 \cap x_5) $$
+\begin{dmath}
+	\theta = x_1 \cap (x_3 \cup (x_6 \cap x_8) ) \cap x_2 \cap (x_4 \cup x_5) \cap x_6 \cap x_7
+\end{dmath}
 
 \newpage
 
