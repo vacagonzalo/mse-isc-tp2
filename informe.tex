@@ -108,26 +108,36 @@ A continuación se observa su función de estructura:
 
 \section{Ejercicio 3}
 
-En la figura \ref{fig:rdbcreado} se puede observar el RDB del circuito.
+En la figura \ref{fig:radar} se puede observar el diagrama esquemático de un Radar de Vigilancia Primario.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.5\textwidth]{img/rdb3.png}
-	\caption{RDB del circuito.}
-	\label{fig:rdbcreado}
+	\includegraphics[width=0.5\textwidth]{img/radar.png}
+	\caption{Diagrama del radar.}
+	\label{fig:radar}
 \end{figure}
 
-$$ \theta = ((PT_1 \cup PQ_1 \cup PC_1) \cap (PT_2 \cup PQ_2 \cup PC_2) \cap (PT_3 \cup PQ_3 \cup PC_3)) \cup PS \cup (T_a \cap T_b) $$
+Por encima de la junta rotativa se encuentran los componentes que giran en azimut mientras que debajo se encuentran los componentes estáticos.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{img/rdb_radar.png}
+	\caption{RDB del radar.}
+	\label{fig:rdb_radar}
+\end{figure}
+
+
+\begin{dmath}
+	\theta = x_1 \cap x_2 \cap ( (x_3 \cap x_5) \cup (x_4 \cap x_6) ) \cap x_7 \cap (x_8 \cup x_9) \cap x_{10}
+\end{dmath}
 
 En la figura \ref{fig:arbol} se puede observar el árbol de fallas.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.8\textwidth]{img/arbol.png}
+	\includegraphics[width=0.8\textwidth]{img/arbol_radar.png}
 	\caption{Árbol de falla.}
 	\label{fig:arbol}
 \end{figure}
-
-Una mejora frente a los disparos espurios del sensor de presión sería poner una redundancia con lógica \emph{AND}.
 
 \end{document}
