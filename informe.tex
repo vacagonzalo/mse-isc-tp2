@@ -143,6 +143,13 @@ Por encima de la junta rotativa se encuentran los componentes que giran en azimu
 
 En la figura \ref{fig:arbol} se puede observar el árbol de fallas.
 
+A partir del árbol de fallas se define el evento \emph{TOP}.
+
+\begin{dmath}
+	TOP = x_1 . x_2 . (1 - ((1 - (x_3 . x_5)) . (1-(x_4 . x_6)) )) . x_7 . (1 - ((1 - x_8).(1 - x_9))) . x_{10}
+\end{dmath}
+
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{img/arbol_radar.png}
